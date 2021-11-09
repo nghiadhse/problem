@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Find Strongest Poker Hand</h2>
+  <div>
+    <p>Suits: {{ suits.join(", ") }}</p>
+    <p>Faces: {{ faces.join(", ") }}</p>
+  </div>
+  <hr />
+  <button (click)="shuffleTheDeck()">Shuffle the deck</button>
+  <br>
+  <button class="play-btn" (click)="playPoker()">Play a game</button>
+  <div *ngIf="playerDeck && playerDeck.cards">
+    <p><strong>Your cards are:</strong></p>
+    <p *ngFor="let card of playerDeck.cards">{{card.suit}} - {{card.value}}</p>
+  </div>
+  <p *ngIf="strongestPokerHand"><strong>Your strongest poker hand:</strong> {{ strongestPokerHand }}</p>
+  <!-- <p>Your cards are: {{ showStrongestCard() }}</p> -->
+</div>

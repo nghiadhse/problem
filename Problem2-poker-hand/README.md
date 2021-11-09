@@ -1,1 +1,0 @@
-Please run `node app.js` to draw 5 cards and see the strongest poker hand.
